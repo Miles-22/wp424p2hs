@@ -1,0 +1,2 @@
+module TeachingCoursesHelper
+end

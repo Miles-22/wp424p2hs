@@ -1,0 +1,7 @@
+<h2 class='User_Header'><%=@current_user.first_name%> Home</h2>
+
+<body>
+<td> Options: </td>
+<li><%= link_to "Currently Teaching".to_sym , :teaching_courses, {:style=>'color:#0000F1;', class: "nav_links"} %> </li>
+<li><%= link_to "Currently Enrolled In".to_sym , :enrollments, {:style=>'color:#0000F1;', class: "nav_links"} %> </li>
+</body>

@@ -1,0 +1,28 @@
+<h1>Courses Currently Teaching</h1>
+
+<table>
+  <tr>
+    <th>Department</th>
+    <th>Level</th>
+    <th>Semester</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @teaching_courses.each do |teaching_course| %>
+  <tr>
+    <td><%= teaching_course.department %></td>
+    <td><%= teaching_course.level %></td>
+    <td><%= teaching_course.semester %></td>
+    <td><%= link_to 'Show', teaching_course %></td>
+    <td><%= link_to 'Edit', edit_teaching_course_path(teaching_course) %></td>
+    <td><%= link_to 'Destroy', teaching_course, confirm: 'Are you sure?', method: :delete %></td>, {:style=>'color:#0000F1;', class: "nav_links"}
+	<td><%= link_to "Assignments" , assignments_path({:course_data => teaching_course})   %> </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Teaching course', new_teaching_course_path %>

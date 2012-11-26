@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Department:</b>
+  <%= @enrollment.department %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @enrollment.level %>
+</p>
+
+<p>
+  <b>Semester:</b>
+  <%= @enrollment.semester %>
+</p>
+
+<p>
+  <b>Student number:</b>
+  <%= @enrollment.student_number %>
+</p>
+
+<p>
+  <b>User number:</b>
+  <%= @enrollment.user_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_enrollment_path(@enrollment) %> |
+<%= link_to 'Back', enrollments_path %>
